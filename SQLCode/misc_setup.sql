@@ -75,15 +75,29 @@ EXEC dbo.Customers_Insert
  , -- money
    @Active = 1 -- tinyint
 
+EXEC dbo.Customers_Insert
+   @customerid = 3
+ , @CustomerName = 'Starfleet Supply'
+ , @CreditAuthorizedUser = 'James T. Kirk'
+ , @CreditLimit = 88
+ , @Active = 1 -- tinyint
+
+
 
 EXEC dbo.Customers_SelectOne
   @customerid = 1
+GO
  
+
+EXEC dbo.Customers_SelectAll
+GO
+
+CREATE ROLE AERights;
+GO
 
  GRANT EXECUTE ON dbo.Customers_Insert TO AERights
  GRANT EXECUTE ON dbo.Customers_SelectOne TO AERights
  GRANT EXECUTE ON dbo.Customers_SelectAll TO AERights
 
- sp_who2
-
+ALTER ROLE AERights ADD MEMBER aeuser
  
