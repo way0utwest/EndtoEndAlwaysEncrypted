@@ -121,6 +121,7 @@ namespace AlwaysEncryptedClient
                     txtCustomerName.Text = "";
                     txtCreditAuth.Text = "";
                     txtCreditLimit.Text = "0.0";
+                    chkActive.Checked = true;
 
                 }
             }

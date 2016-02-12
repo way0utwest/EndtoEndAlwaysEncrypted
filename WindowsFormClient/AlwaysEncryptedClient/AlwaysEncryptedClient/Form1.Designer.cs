@@ -45,14 +45,14 @@
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.btnQuit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.txtCreditAuth = new System.Windows.Forms.TextBox();
-            this.txtCreditLimit = new System.Windows.Forms.TextBox();
-            this.chkActive = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnAddCustomer = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.chkActive = new System.Windows.Forms.CheckBox();
+            this.txtCreditLimit = new System.Windows.Forms.TextBox();
+            this.txtCreditAuth = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -64,7 +64,7 @@
             this.txtInstance.Name = "txtInstance";
             this.txtInstance.Size = new System.Drawing.Size(132, 20);
             this.txtInstance.TabIndex = 0;
-            this.txtInstance.Text = ".\\SQL2014";
+            this.txtInstance.Text = ".\\SQL2016";
             // 
             // label1
             // 
@@ -228,35 +228,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add New Customer";
             // 
-            // label6
+            // btnAddCustomer
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Name";
+            this.btnAddCustomer.Location = new System.Drawing.Point(32, 160);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(122, 29);
+            this.btnAddCustomer.TabIndex = 18;
+            this.btnAddCustomer.Text = "Add";
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
-            // txtCustomerName
+            // label8
             // 
-            this.txtCustomerName.Location = new System.Drawing.Point(74, 42);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomerName.TabIndex = 12;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 105);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Credit Limit";
             // 
-            // txtCreditAuth
+            // label7
             // 
-            this.txtCreditAuth.Location = new System.Drawing.Point(74, 72);
-            this.txtCreditAuth.Name = "txtCreditAuth";
-            this.txtCreditAuth.Size = new System.Drawing.Size(100, 20);
-            this.txtCreditAuth.TabIndex = 13;
-            // 
-            // txtCreditLimit
-            // 
-            this.txtCreditLimit.Location = new System.Drawing.Point(74, 99);
-            this.txtCreditLimit.Name = "txtCreditLimit";
-            this.txtCreditLimit.Size = new System.Drawing.Size(100, 20);
-            this.txtCreditLimit.TabIndex = 14;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Authorizer";
             // 
             // chkActive
             // 
@@ -268,33 +266,35 @@
             this.chkActive.Text = "Active";
             this.chkActive.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // txtCreditLimit
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Authorizer";
+            this.txtCreditLimit.Location = new System.Drawing.Point(74, 99);
+            this.txtCreditLimit.Name = "txtCreditLimit";
+            this.txtCreditLimit.Size = new System.Drawing.Size(100, 20);
+            this.txtCreditLimit.TabIndex = 14;
             // 
-            // label8
+            // txtCreditAuth
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 105);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Credit Limit";
+            this.txtCreditAuth.Location = new System.Drawing.Point(74, 72);
+            this.txtCreditAuth.Name = "txtCreditAuth";
+            this.txtCreditAuth.Size = new System.Drawing.Size(100, 20);
+            this.txtCreditAuth.TabIndex = 13;
             // 
-            // btnAddCustomer
+            // txtCustomerName
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(32, 160);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(122, 29);
-            this.btnAddCustomer.TabIndex = 18;
-            this.btnAddCustomer.Text = "Add";
-            this.btnAddCustomer.UseVisualStyleBackColor = true;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            this.txtCustomerName.Location = new System.Drawing.Point(74, 42);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerName.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Name";
             // 
             // frmAlwaysEncrypted
             // 
