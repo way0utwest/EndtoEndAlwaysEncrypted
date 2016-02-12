@@ -1,17 +1,18 @@
+-- drop table Customers
 CREATE TABLE Customers
-(CustomerID INT
-, CustomerName VARCHAR(200)
-, CreditAuthorizedUser VARCHAR(200)
-, CreditLimit MONEY
-, Active TINYINT
+(CustomerID INT NOT NULL PRIMARY KEY
+, CustomerName VARCHAR(200) NOT NULL
+, CreditAuthorizedUser VARCHAR(200) NOT NULL DEFAULT ' '
+, CreditLimit MONEY NOT NULL DEFAULT 0.0
+, Active BIT NOT NULL DEFAULT 1
 );
 GO
 CREATE PROCEDURE Customers_Insert
-  @customerid INT
+  @CustomerID INT
 , @CustomerName VARCHAR(200)
 , @CreditAuthorizedUser VARCHAR(200)
 , @CreditLimit MONEY
-, @Active TINYINT
+, @Active bit
 AS
 BEGIN
 
