@@ -1,9 +1,17 @@
--- drop table Customers
+
 CREATE TABLE Customers
 (CustomerID INT NOT NULL PRIMARY KEY
 , CustomerName VARCHAR(200) NOT NULL
-, CreditAuthorizedUser VARCHAR(200) NOT NULL DEFAULT ' '
+, CreditAuthorizedUser VARCHAR(200) COLLATE Latin1_General_BIN2 
+                  ENCRYPTED WITH
+                     ( 
+                          ENCRYPTION_TYPE = DETERMINISTIC, 
+                          ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', 
+                          COLUMN_ENCRYPTION_KEY = CustomerAuthCert
+                          )
+				    NOT NULL 
 , CreditLimit MONEY NOT NULL DEFAULT 0.0
+, SecureCreditLimit NUMERIC(10,4) NOT NULL 
 , Active BIT NOT NULL DEFAULT 1
 );
 GO
@@ -96,9 +104,29 @@ GO
 CREATE ROLE AERights;
 GO
 
- GRANT EXECUTE ON dbo.Customers_Insert TO AERights
- GRANT EXECUTE ON dbo.Customers_SelectOne TO AERights
- GRANT EXECUTE ON dbo.Customers_SelectAll TO AERights
-
+GRANT EXECUTE ON dbo.Customers_Insert TO AERights
+GRANT EXECUTE ON dbo.Customers_SelectOne TO AERights
+GRANT EXECUTE ON dbo.Customers_SelectAll TO AERights
+go
 ALTER ROLE AERights ADD MEMBER aeuser
- 
+go
+GRANT VIEW ANY COLUMN MASTER KEY DEFINITION TO AERights;
+GO
+GRANT VIEW ANY COLUMN ENCRYPTION KEY DEFINITION TO AERights;
+go
+
+/*
+-- Reset
+
+drop table Customers
+drop procedure dbo.Customers_Insert
+drop procedure dbo.Customers_SelectOne
+drop procedure dbo.Customers_SelectAll
+
+
+-- SSMS
+Column Encryption Setting = Enabled
+
+
+*/ 			   
+			   
