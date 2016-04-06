@@ -13,6 +13,8 @@ namespace AlwaysEncryptedClient
 {
     public partial class frmAlwaysEncrypted : Form
     {
+        public string strProcedureName = "dbo.Customers_SelectAll";
+
         public frmAlwaysEncrypted()
         {
             InitializeComponent();
@@ -43,13 +45,20 @@ namespace AlwaysEncryptedClient
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("dbo.Customers_SelectAll", con))
+                    using (SqlCommand cmd = new SqlCommand(strProcedureName, con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        //SqlParameter ln = new SqlParameter("@CustomerID", SqlDbType.Int, 32);
-                        //ln.Value = txtCustID.Text;
-                        //cmd.Parameters.Add(ln);
-                        SqlDataReader rdr = cmd.ExecuteReader();
+                        if (strProcedureName == "dbo.Customers_SelectOne")
+                    {
+                        SqlParameter cCustID = new SqlParameter("@CustomerID", SqlDbType.Int);
+                        cCustID.Value = txtFilter.Text;
+                        cmd.Parameters.Add(cCustID);
+
+                    }
+                    //SqlParameter ln = new SqlParameter("@CustomerID", SqlDbType.Int, 32);
+                    //ln.Value = txtCustID.Text;
+                    //cmd.Parameters.Add(ln);
+                    SqlDataReader rdr = cmd.ExecuteReader();
                         DataTable dataTable = new DataTable();
 
                         //Load the data from SqlDataReader into the data table.
@@ -98,12 +107,23 @@ namespace AlwaysEncryptedClient
                     SqlParameter cName = new SqlParameter("@CustomerName", SqlDbType.VarChar, 200);
                     cName.Value = txtCustomerName.Text;
                     cmd.Parameters.Add(cName);
+                    SqlParameter cTaxID = new SqlParameter("@TaxID", SqlDbType.VarChar, 20);
+                    cTaxID.Value = txtTaxID.Text;
+                    cmd.Parameters.Add(cTaxID);
                     SqlParameter cAuth = new SqlParameter("@CreditAuthorizedUser", SqlDbType.VarChar, 200);
                     cAuth.Value = txtCreditAuth.Text;
                     cmd.Parameters.Add(cAuth);
                     SqlParameter cLimit = new SqlParameter("@CreditLimit", SqlDbType.Float);
                     cLimit.Value = Convert.ToDecimal(txtCreditLimit.Text);
                     cmd.Parameters.Add(cLimit);
+                    SqlParameter cSecureLimit = new SqlParameter("@SecureCreditLimit", SqlDbType.Decimal,10);
+                    cSecureLimit.Value = Convert.ToDecimal(txtSecureCreditLimit.Text);
+                    // Add the parameter and set the precision and scale or Always Encrypted will complain.
+                    cmd.Parameters.Add(cSecureLimit);
+                    cmd.Parameters["@SecureCreditLimit"].Precision = 10;
+                    cmd.Parameters["@SecureCreditLimit"].Scale = 4;
+
+
                     SqlParameter bActive = new SqlParameter("@Active", SqlDbType.Bit);
                     bActive.Value = chkActive.Checked;
                     //bool b = chkActive.Checked;
@@ -134,6 +154,23 @@ namespace AlwaysEncryptedClient
             {
                 //Close the connection.
                 con.Close();
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            if (strProcedureName== "dbo.Customers_SelectAll")
+            {
+                strProcedureName = "dbo.Customers_SelectOne";
+                lblProcedure.Text = "dbo.Customers_SelectOne";
+                txtFilter.Enabled = true;
+            }
+            else
+            {
+                strProcedureName = "dbo.Customers_SelectAll";
+                lblProcedure.Text = "dbo.Customers_SelectAll";
+                txtFilter.Enabled = false;
+                txtFilter.Text = "";
             }
         }
     }
