@@ -45,6 +45,8 @@
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.btnQuit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTaxID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtSecureCreditLimit = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnAddCustomer = new System.Windows.Forms.Button();
@@ -57,8 +59,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblProcedure = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtTaxID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -68,7 +68,7 @@
             // 
             this.txtInstance.Location = new System.Drawing.Point(75, 19);
             this.txtInstance.Name = "txtInstance";
-            this.txtInstance.Size = new System.Drawing.Size(132, 20);
+            this.txtInstance.Size = new System.Drawing.Size(121, 20);
             this.txtInstance.TabIndex = 80;
             this.txtInstance.Text = ".\\SQL2016";
             // 
@@ -95,7 +95,7 @@
             // 
             this.txtDB.Location = new System.Drawing.Point(75, 46);
             this.txtDB.Name = "txtDB";
-            this.txtDB.Size = new System.Drawing.Size(132, 20);
+            this.txtDB.Size = new System.Drawing.Size(121, 20);
             this.txtDB.TabIndex = 300;
             this.txtDB.Text = "AlwaysEncryptedDemo";
             // 
@@ -121,7 +121,7 @@
             // 
             this.txtUser.Location = new System.Drawing.Point(75, 83);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(132, 20);
+            this.txtUser.Size = new System.Drawing.Size(121, 20);
             this.txtUser.TabIndex = 600;
             this.txtUser.Text = "AEUser";
             // 
@@ -130,7 +130,7 @@
             this.txtPwd.Location = new System.Drawing.Point(75, 112);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
-            this.txtPwd.Size = new System.Drawing.Size(132, 20);
+            this.txtPwd.Size = new System.Drawing.Size(121, 20);
             this.txtPwd.TabIndex = 700;
             this.txtPwd.Text = "Blu3Corn";
             // 
@@ -146,7 +146,8 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtDB);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(382, 15);
+            this.groupBox1.Location = new System.Drawing.Point(393, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(220, 166);
             this.groupBox1.TabIndex = 8;
@@ -173,15 +174,17 @@
             // 
             // txtCustID
             // 
-            this.txtCustID.Location = new System.Drawing.Point(110, 19);
+            this.txtCustID.Location = new System.Drawing.Point(119, 11);
+            this.txtCustID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCustID.Name = "txtCustID";
-            this.txtCustID.Size = new System.Drawing.Size(206, 20);
+            this.txtCustID.Size = new System.Drawing.Size(233, 20);
             this.txtCustID.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 22);
+            this.label5.Location = new System.Drawing.Point(23, 16);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 100;
@@ -189,9 +192,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(44, 273);
+            this.btnSearch.Location = new System.Drawing.Point(22, 204);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(119, 23);
+            this.btnSearch.Size = new System.Drawing.Size(122, 26);
             this.btnSearch.TabIndex = 110;
             this.btnSearch.Text = "Get Customers";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -200,14 +204,16 @@
             // dgvCustomers
             // 
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(24, 302);
+            this.dgvCustomers.Location = new System.Drawing.Point(19, 235);
+            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.Size = new System.Drawing.Size(578, 213);
+            this.dgvCustomers.Size = new System.Drawing.Size(603, 151);
             this.dgvCustomers.TabIndex = 12;
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(463, 521);
+            this.btnQuit.Location = new System.Drawing.Point(504, 390);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(119, 23);
             this.btnQuit.TabIndex = 13;
@@ -233,22 +239,43 @@
             this.groupBox2.Controls.Add(this.txtCustID);
             this.groupBox2.Location = new System.Drawing.Point(12, 15);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(337, 238);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(376, 184);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add New Customer";
             // 
+            // txtTaxID
+            // 
+            this.txtTaxID.Location = new System.Drawing.Point(119, 83);
+            this.txtTaxID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTaxID.Name = "txtTaxID";
+            this.txtTaxID.Size = new System.Drawing.Size(233, 20);
+            this.txtTaxID.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 82);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(36, 13);
+            this.label9.TabIndex = 210;
+            this.label9.Text = "TaxID";
+            // 
             // txtSecureCreditLimit
             // 
-            this.txtSecureCreditLimit.Location = new System.Drawing.Point(110, 166);
+            this.txtSecureCreditLimit.Location = new System.Drawing.Point(119, 130);
+            this.txtSecureCreditLimit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSecureCreditLimit.Name = "txtSecureCreditLimit";
-            this.txtSecureCreditLimit.Size = new System.Drawing.Size(206, 20);
+            this.txtSecureCreditLimit.Size = new System.Drawing.Size(233, 20);
             this.txtSecureCreditLimit.TabIndex = 24;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 169);
+            this.label10.Location = new System.Drawing.Point(20, 132);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 13);
             this.label10.TabIndex = 190;
@@ -256,9 +283,10 @@
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(128, 202);
+            this.btnAddCustomer.Location = new System.Drawing.Point(276, 155);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(122, 29);
+            this.btnAddCustomer.Size = new System.Drawing.Size(76, 25);
             this.btnAddCustomer.TabIndex = 30;
             this.btnAddCustomer.Text = "Add";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
@@ -267,7 +295,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 144);
+            this.label8.Location = new System.Drawing.Point(20, 108);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 440;
@@ -276,7 +305,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 78);
+            this.label7.Location = new System.Drawing.Point(20, 61);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 160;
@@ -285,7 +314,8 @@
             // chkActive
             // 
             this.chkActive.AutoSize = true;
-            this.chkActive.Location = new System.Drawing.Point(48, 209);
+            this.chkActive.Location = new System.Drawing.Point(119, 155);
+            this.chkActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(56, 17);
             this.chkActive.TabIndex = 28;
@@ -294,29 +324,33 @@
             // 
             // txtCreditLimit
             // 
-            this.txtCreditLimit.Location = new System.Drawing.Point(110, 137);
+            this.txtCreditLimit.Location = new System.Drawing.Point(119, 106);
+            this.txtCreditLimit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCreditLimit.Name = "txtCreditLimit";
-            this.txtCreditLimit.Size = new System.Drawing.Size(206, 20);
+            this.txtCreditLimit.Size = new System.Drawing.Size(233, 20);
             this.txtCreditLimit.TabIndex = 20;
             // 
             // txtCreditAuth
             // 
-            this.txtCreditAuth.Location = new System.Drawing.Point(110, 75);
+            this.txtCreditAuth.Location = new System.Drawing.Point(119, 59);
+            this.txtCreditAuth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCreditAuth.Name = "txtCreditAuth";
-            this.txtCreditAuth.Size = new System.Drawing.Size(206, 20);
+            this.txtCreditAuth.Size = new System.Drawing.Size(233, 20);
             this.txtCreditAuth.TabIndex = 15;
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Location = new System.Drawing.Point(110, 47);
+            this.txtCustomerName.Location = new System.Drawing.Point(119, 35);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(206, 20);
+            this.txtCustomerName.Size = new System.Drawing.Size(233, 20);
             this.txtCustomerName.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 49);
+            this.label6.Location = new System.Drawing.Point(21, 41);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 110;
@@ -324,9 +358,10 @@
             // 
             // lblProcedure
             // 
-            this.lblProcedure.Location = new System.Drawing.Point(169, 273);
+            this.lblProcedure.Location = new System.Drawing.Point(159, 211);
+            this.lblProcedure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProcedure.Name = "lblProcedure";
-            this.lblProcedure.Size = new System.Drawing.Size(240, 24);
+            this.lblProcedure.Size = new System.Drawing.Size(120, 12);
             this.lblProcedure.TabIndex = 150;
             this.lblProcedure.Text = "dbo.Customers_SelectAll";
             this.lblProcedure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,32 +370,17 @@
             // txtFilter
             // 
             this.txtFilter.Enabled = false;
-            this.txtFilter.Location = new System.Drawing.Point(396, 277);
+            this.txtFilter.Location = new System.Drawing.Point(316, 208);
+            this.txtFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(100, 20);
+            this.txtFilter.Size = new System.Drawing.Size(117, 20);
             this.txtFilter.TabIndex = 160;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
-            this.label9.TabIndex = 210;
-            this.label9.Text = "TaxID";
-            // 
-            // txtTaxID
-            // 
-            this.txtTaxID.Location = new System.Drawing.Point(110, 107);
-            this.txtTaxID.Name = "txtTaxID";
-            this.txtTaxID.Size = new System.Drawing.Size(206, 20);
-            this.txtTaxID.TabIndex = 18;
             // 
             // frmAlwaysEncrypted
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 556);
+            this.ClientSize = new System.Drawing.Size(649, 415);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblProcedure);
             this.Controls.Add(this.groupBox2);
