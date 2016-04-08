@@ -50,9 +50,9 @@ namespace AlwaysEncryptedClient
                         cmd.CommandType = CommandType.StoredProcedure;
                         if (strProcedureName == "dbo.Customers_SelectOne")
                     {
-                        SqlParameter cCustID = new SqlParameter("@CustomerID", SqlDbType.Int);
-                        cCustID.Value = txtFilter.Text;
-                        cmd.Parameters.Add(cCustID);
+                        SqlParameter cCustEmail = new SqlParameter("@CustomerEmail", SqlDbType.Int);
+                        cCustEmail.Value = txtFilter.Text;
+                        cmd.Parameters.Add(cCustEmail);
 
                     }
                     //SqlParameter ln = new SqlParameter("@CustomerID", SqlDbType.Int, 32);
@@ -110,9 +110,9 @@ namespace AlwaysEncryptedClient
                     SqlParameter cTaxID = new SqlParameter("@TaxID", SqlDbType.VarChar, 20);
                     cTaxID.Value = txtTaxID.Text;
                     cmd.Parameters.Add(cTaxID);
-                    SqlParameter cAuth = new SqlParameter("@CreditAuthorizedUser", SqlDbType.VarChar, 200);
-                    cAuth.Value = txtCreditAuth.Text;
-                    cmd.Parameters.Add(cAuth);
+                    SqlParameter cCustomerEmail = new SqlParameter("@CustomerEmail", SqlDbType.VarChar, 200);
+                    cCustomerEmail.Value = txtCustomerEmail.Text;
+                    cmd.Parameters.Add(cCustomerEmail);
                     SqlParameter cLimit = new SqlParameter("@CreditLimit", SqlDbType.Float);
                     cLimit.Value = Convert.ToDecimal(txtCreditLimit.Text);
                     cmd.Parameters.Add(cLimit);
@@ -139,8 +139,9 @@ namespace AlwaysEncryptedClient
 
                     txtCustID.Text = "";
                     txtCustomerName.Text = "";
-                    txtCreditAuth.Text = "";
+                    txtCustomerEmail.Text = "";
                     txtCreditLimit.Text = "0.0";
+                    txtSecureCreditLimit.Text = "0.0";
                     chkActive.Checked = true;
 
                 }

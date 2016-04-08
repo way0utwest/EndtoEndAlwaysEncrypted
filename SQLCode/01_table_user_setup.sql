@@ -36,14 +36,7 @@ GO
 CREATE TABLE Customers
 (CustomerID INT NOT NULL PRIMARY KEY
 , CustomerName VARCHAR(200) NOT NULL
-, CreditAuthorizedUser VARCHAR(200) COLLATE Latin1_General_BIN2 
-                  ENCRYPTED WITH
-                     ( 
-                          ENCRYPTION_TYPE = DETERMINISTIC, 
-                          ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', 
-                          COLUMN_ENCRYPTION_KEY = [AEDemoCEK]
-                          )
-				    NOT NULL 
+, CustomerEmail VARCHAR(200) COLLATE Latin1_General_BIN2 
 , TaxID VARCHAR(20) NOT NULL
 , CreditLimit MONEY NOT NULL DEFAULT 0.0
 , SecureCreditLimit Money NOT NULL 
@@ -57,12 +50,24 @@ DROP PROCEDURE IF EXISTS dbo.Customers_SelectOne;
 GO
 
 /*
+Insert data
+*/
+INSERT customers 
+ VALUES (1, 'Steve', 'sjones@myisp.net', '1234567', 100, 200, 1)
+      , (2, 'Andy', 'andy@someisp.com', '45667778', 400, 2000, 1)
+      , (3, 'Kyle', 'kylejohnson@hotmail.com', '9876765765', 200, 2000, 1)
+      , (4, 'DJ', 'dj@halo.com', '55555555', 3500, 20000, 1)
+      , (5, 'Sarah', 'ssmith@gmail.com', '4666688', 4000, 20000, 1)
+GO
+
+/*
 Create a few procedures to work with the table.
 */
+
 CREATE PROCEDURE Customers_Insert
   @CustomerID INT
 , @CustomerName VARCHAR(200)
-, @CreditAuthorizedUser VARCHAR(200)
+, @CustomerEmail VARCHAR(200)
 , @TaxID VARCHAR(20)
 , @CreditLimit MONEY
 , @SecureCreditLimit MONEY
@@ -74,7 +79,7 @@ AS
         (
           CustomerID
         , CustomerName
-        , CreditAuthorizedUser
+        , CustomerEmail
 		, TaxID
         , CreditLimit
         , SecureCreditLimit
@@ -84,7 +89,7 @@ AS
         (
           @CustomerID
         , @CustomerName
-        , @CreditAuthorizedUser
+        , @CustomerEmail
 		, @TaxID
         , @CreditLimit
         , @SecureCreditLimit
@@ -94,7 +99,9 @@ AS
   END
 
 GO
-CREATE PROCEDURE Customers_SelectOne @customerid INT
+CREATE PROCEDURE Customers_SelectOne
+-- alter PROCEDURE Customers_SelectOne
+ @CustomerEmail VARCHAR(200)
 AS
   BEGIN
     SELECT
@@ -102,9 +109,10 @@ AS
       FROM
         dbo.Customers AS c
       WHERE
-        c.CustomerID = @customerid
+        c.CustomerEmail = @CustomerEmail
   END
- GO
+GO
+
 CREATE PROCEDURE Customers_SelectAll
 AS
   BEGIN

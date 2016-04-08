@@ -54,7 +54,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
             this.txtCreditLimit = new System.Windows.Forms.TextBox();
-            this.txtCreditAuth = new System.Windows.Forms.TextBox();
+            this.txtCustomerEmail = new System.Windows.Forms.TextBox();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblProcedure = new System.Windows.Forms.Label();
@@ -232,7 +232,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.chkActive);
             this.groupBox2.Controls.Add(this.txtCreditLimit);
-            this.groupBox2.Controls.Add(this.txtCreditAuth);
+            this.groupBox2.Controls.Add(this.txtCustomerEmail);
             this.groupBox2.Controls.Add(this.txtCustomerName);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -307,9 +307,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(20, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 160;
-            this.label7.Text = "Authorizer";
+            this.label7.Text = "Email";
             // 
             // chkActive
             // 
@@ -330,13 +330,13 @@
             this.txtCreditLimit.Size = new System.Drawing.Size(233, 20);
             this.txtCreditLimit.TabIndex = 20;
             // 
-            // txtCreditAuth
+            // txtCustomerEmail
             // 
-            this.txtCreditAuth.Location = new System.Drawing.Point(119, 59);
-            this.txtCreditAuth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtCreditAuth.Name = "txtCreditAuth";
-            this.txtCreditAuth.Size = new System.Drawing.Size(233, 20);
-            this.txtCreditAuth.TabIndex = 15;
+            this.txtCustomerEmail.Location = new System.Drawing.Point(119, 59);
+            this.txtCustomerEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustomerEmail.Name = "txtCustomerEmail";
+            this.txtCustomerEmail.Size = new System.Drawing.Size(233, 20);
+            this.txtCustomerEmail.TabIndex = 15;
             // 
             // txtCustomerName
             // 
@@ -425,7 +425,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox chkActive;
         private System.Windows.Forms.TextBox txtCreditLimit;
-        private System.Windows.Forms.TextBox txtCreditAuth;
+        private System.Windows.Forms.TextBox txtCustomerEmail;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblProcedure;

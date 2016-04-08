@@ -10,41 +10,41 @@ You are free to use this code inside of your own organization.
 */
 USE AlwaysEncryptedDemo
 GO
+-- Look at the data
+EXEC dbo.Customers_SelectAll
+GO
 
 
+-- Let's add a row
  EXEC dbo.Customers_Insert
-   @customerid = 1
+   @customerid = 10
  , @CustomerName = 'Acme'
- , @CreditAuthorizedUser = 'Bill'
- , @TaxID = '123456'
- , @CreditLimit = 5000
- , @SecureCreditLimit = 20000
+ , @CustomerEmail = 'Bill@bill.com'
+ , @TaxID = '12345678990'
+ , @CreditLimit = 50
+ , @SecureCreditLimit = 50
  , @Active = 1 -- tinyint;
 
 
-EXEC dbo.Customers_Insert
-   @customerid = 2
- , @CustomerName = 'RoadRunner Enterprises'
- , @CreditAuthorizedUser = 'Wile E. Coyote'
- , @TaxID = '789012'
- , @CreditLimit = 500
- , @Active = 1 -- tinyint
-
-EXEC dbo.Customers_Insert
-   @customerid = 3
- , @CustomerName = 'Starfleet Supply'
- , @CreditAuthorizedUser = 'James T. Kirk'
- , @TaxID = '987654321'
- , @CreditLimit = 88
- , @Active = 1 -- tinyint
- GO
-
-
--- Try SELECT queries
-EXEC dbo.Customers_SelectOne
-  @customerid = 1
-GO
- 
-
+-- requery
 EXEC dbo.Customers_SelectAll
 GO
+
+
+-- Try a single one
+EXEC dbo.Customers_SelectOne
+  @customeremail = 'bill@bill.com'
+GO
+
+
+
+-- why?
+
+
+
+
+-- collation
+EXEC dbo.Customers_SelectOne
+  @customeremail = 'Bill@bill.com'
+GO
+
