@@ -26,8 +26,13 @@ SELECT CustomerID
 SELECT *
  FROM dbo.Customers
   WHERE CustomerEmail > 'sjones'
+GO
 
 
+SELECT *
+ FROM dbo.Customers
+  WHERE CustomerEmail = 'sjones@myisp.net'
+GO
 
 -- error
 

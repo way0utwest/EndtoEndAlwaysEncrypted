@@ -16,6 +16,7 @@ GO
 -- Add another email - andy@someisp.com
 
 
+-- Include Actual Execution Plan
 -- View the data
 EXEC dbo.Customers_SelectAll;
 GO
@@ -28,7 +29,13 @@ CREATE INDEX Customer_Email_IDX
 GO
 
 
-EXEC dbo.Customers_SelectOne
-    @CustomerEmail = 'sjones@myisp.net';
+-- Works
 
 
+
+-- New index
+CREATE INDEX Cutomer_Secure_IDX
+ ON dbo.Customers(SecureCreditLimit);
+ GO
+-- Not valid
+ 

@@ -17,8 +17,8 @@ CREATE TABLE Customers
 , CustomerName VARCHAR(200) NOT NULL
 , CustomerEmail VARCHAR(200) COLLATE Latin1_General_BIN2 
 , TaxID VARCHAR(20) NOT NULL
-, CreditLimit MONEY NOT NULL DEFAULT 0.0
-, SecureCreditLimit Money NOT NULL 
+, CreditLimit int NOT NULL DEFAULT 0.0
+, SecureCreditLimit INT NOT NULL 
 , Active BIT NOT NULL DEFAULT 1
 );
 GO
@@ -32,7 +32,7 @@ INSERT customers
       , (2, 'Andy', 'andy@someisp.com', '45667778', 400, 2000, 1)
       , (3, 'Kyle', 'kylejohnson@hotmail.com', '9876765765', 200, 2000, 1)
       , (4, 'DJ', 'dj@halo.com', '55555555', 3500, 20000, 1)
-      , (5, 'Sarah', 'ssmith@gmail.com', '4666688', 4000, 20000, 1)
+      , (5, 'Sarah', 'ssmith@gmail.com', '4666688', 4000, 2000, 1)
 GO
 
 /*
@@ -60,8 +60,8 @@ ALTER PROCEDURE Customers_Insert
 , @CustomerName VARCHAR(200)
 , @CustomerEmail VARCHAR(200)
 , @TaxID VARCHAR(20)
-, @CreditLimit MONEY
-, @SecureCreditLimit MONEY
+, @CreditLimit INT
+, @SecureCreditLimit INT
 , @Active BIT
 AS
   BEGIN

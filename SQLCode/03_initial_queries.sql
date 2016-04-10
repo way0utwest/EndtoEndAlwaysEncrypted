@@ -14,13 +14,38 @@ GO
 EXEC dbo.Customers_SelectAll
 GO
 
----------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------
--- Run app here
----------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------
+
+-- Let's add a row
+ EXEC dbo.Customers_Insert
+   @customerid = 10
+ , @CustomerName = 'Acme'
+ , @CustomerEmail = 'Bill@bill.com'
+ , @TaxID = '12345678990'
+ , @CreditLimit = 50
+ , @SecureCreditLimit = 50
+ , @Active = 1 -- tinyint;
+
 
 -- requery
 EXEC dbo.Customers_SelectAll
 GO
 
+
+-- Try a single one
+EXEC dbo.Customers_SelectOne
+  @customeremail = 'bill@bill.com'
+GO
+
+
+
+-- why?
+
+
+
+
+-- collation
+EXEC dbo.Customers_SelectOne
+  @customeremail = 'Bill@bill.com'
+GO
+
+-- Always Encrypted requires _BIN2 collation for strings

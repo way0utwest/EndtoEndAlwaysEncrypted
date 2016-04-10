@@ -147,7 +147,7 @@
             this.groupBox1.Controls.Add(this.txtDB);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(393, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(220, 166);
             this.groupBox1.TabIndex = 8;
@@ -157,6 +157,8 @@
             // chkEncrypt
             // 
             this.chkEncrypt.AutoSize = true;
+            this.chkEncrypt.Checked = true;
+            this.chkEncrypt.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEncrypt.Location = new System.Drawing.Point(75, 140);
             this.chkEncrypt.Name = "chkEncrypt";
             this.chkEncrypt.Size = new System.Drawing.Size(74, 17);
@@ -175,7 +177,7 @@
             // txtCustID
             // 
             this.txtCustID.Location = new System.Drawing.Point(119, 11);
-            this.txtCustID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustID.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(233, 20);
             this.txtCustID.TabIndex = 9;
@@ -193,7 +195,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(22, 204);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(122, 26);
             this.btnSearch.TabIndex = 110;
@@ -205,7 +207,7 @@
             // 
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomers.Location = new System.Drawing.Point(19, 235);
-            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.Size = new System.Drawing.Size(603, 151);
             this.dgvCustomers.TabIndex = 12;
@@ -213,7 +215,7 @@
             // btnQuit
             // 
             this.btnQuit.Location = new System.Drawing.Point(504, 390);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(119, 23);
             this.btnQuit.TabIndex = 13;
@@ -239,7 +241,7 @@
             this.groupBox2.Controls.Add(this.txtCustID);
             this.groupBox2.Location = new System.Drawing.Point(12, 15);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(376, 184);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
@@ -248,7 +250,7 @@
             // txtTaxID
             // 
             this.txtTaxID.Location = new System.Drawing.Point(119, 83);
-            this.txtTaxID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTaxID.Margin = new System.Windows.Forms.Padding(2);
             this.txtTaxID.Name = "txtTaxID";
             this.txtTaxID.Size = new System.Drawing.Size(233, 20);
             this.txtTaxID.TabIndex = 18;
@@ -266,7 +268,7 @@
             // txtSecureCreditLimit
             // 
             this.txtSecureCreditLimit.Location = new System.Drawing.Point(119, 130);
-            this.txtSecureCreditLimit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSecureCreditLimit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSecureCreditLimit.Name = "txtSecureCreditLimit";
             this.txtSecureCreditLimit.Size = new System.Drawing.Size(233, 20);
             this.txtSecureCreditLimit.TabIndex = 24;
@@ -284,7 +286,7 @@
             // btnAddCustomer
             // 
             this.btnAddCustomer.Location = new System.Drawing.Point(276, 155);
-            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(76, 25);
             this.btnAddCustomer.TabIndex = 30;
@@ -315,7 +317,7 @@
             // 
             this.chkActive.AutoSize = true;
             this.chkActive.Location = new System.Drawing.Point(119, 155);
-            this.chkActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkActive.Margin = new System.Windows.Forms.Padding(2);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(56, 17);
             this.chkActive.TabIndex = 28;
@@ -325,7 +327,7 @@
             // txtCreditLimit
             // 
             this.txtCreditLimit.Location = new System.Drawing.Point(119, 106);
-            this.txtCreditLimit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCreditLimit.Margin = new System.Windows.Forms.Padding(2);
             this.txtCreditLimit.Name = "txtCreditLimit";
             this.txtCreditLimit.Size = new System.Drawing.Size(233, 20);
             this.txtCreditLimit.TabIndex = 20;
@@ -333,7 +335,7 @@
             // txtCustomerEmail
             // 
             this.txtCustomerEmail.Location = new System.Drawing.Point(119, 59);
-            this.txtCustomerEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustomerEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerEmail.Name = "txtCustomerEmail";
             this.txtCustomerEmail.Size = new System.Drawing.Size(233, 20);
             this.txtCustomerEmail.TabIndex = 15;
@@ -341,7 +343,7 @@
             // txtCustomerName
             // 
             this.txtCustomerName.Location = new System.Drawing.Point(119, 35);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(233, 20);
             this.txtCustomerName.TabIndex = 12;
@@ -358,10 +360,10 @@
             // 
             // lblProcedure
             // 
-            this.lblProcedure.Location = new System.Drawing.Point(159, 211);
+            this.lblProcedure.Location = new System.Drawing.Point(170, 208);
             this.lblProcedure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProcedure.Name = "lblProcedure";
-            this.lblProcedure.Size = new System.Drawing.Size(120, 12);
+            this.lblProcedure.Size = new System.Drawing.Size(180, 19);
             this.lblProcedure.TabIndex = 150;
             this.lblProcedure.Text = "dbo.Customers_SelectAll";
             this.lblProcedure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,10 +372,10 @@
             // txtFilter
             // 
             this.txtFilter.Enabled = false;
-            this.txtFilter.Location = new System.Drawing.Point(316, 208);
-            this.txtFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFilter.Location = new System.Drawing.Point(398, 208);
+            this.txtFilter.Margin = new System.Windows.Forms.Padding(2);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(117, 20);
+            this.txtFilter.Size = new System.Drawing.Size(191, 20);
             this.txtFilter.TabIndex = 160;
             // 
             // frmAlwaysEncrypted

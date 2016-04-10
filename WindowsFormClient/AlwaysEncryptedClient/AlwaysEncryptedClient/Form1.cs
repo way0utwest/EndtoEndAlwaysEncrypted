@@ -50,7 +50,7 @@ namespace AlwaysEncryptedClient
                         cmd.CommandType = CommandType.StoredProcedure;
                         if (strProcedureName == "dbo.Customers_SelectOne")
                     {
-                        SqlParameter cCustEmail = new SqlParameter("@CustomerEmail", SqlDbType.Int);
+                        SqlParameter cCustEmail = new SqlParameter("@CustomerEmail", SqlDbType.VarChar, 200);
                         cCustEmail.Value = txtFilter.Text;
                         cmd.Parameters.Add(cCustEmail);
 
@@ -113,15 +113,13 @@ namespace AlwaysEncryptedClient
                     SqlParameter cCustomerEmail = new SqlParameter("@CustomerEmail", SqlDbType.VarChar, 200);
                     cCustomerEmail.Value = txtCustomerEmail.Text;
                     cmd.Parameters.Add(cCustomerEmail);
-                    SqlParameter cLimit = new SqlParameter("@CreditLimit", SqlDbType.Float);
+                    SqlParameter cLimit = new SqlParameter("@CreditLimit", SqlDbType.Int);
                     cLimit.Value = Convert.ToDecimal(txtCreditLimit.Text);
                     cmd.Parameters.Add(cLimit);
-                    SqlParameter cSecureLimit = new SqlParameter("@SecureCreditLimit", SqlDbType.Decimal,10);
+                    SqlParameter cSecureLimit = new SqlParameter("@SecureCreditLimit", SqlDbType.Int);
                     cSecureLimit.Value = Convert.ToDecimal(txtSecureCreditLimit.Text);
                     // Add the parameter and set the precision and scale or Always Encrypted will complain.
                     cmd.Parameters.Add(cSecureLimit);
-                    cmd.Parameters["@SecureCreditLimit"].Precision = 10;
-                    cmd.Parameters["@SecureCreditLimit"].Scale = 4;
 
 
                     SqlParameter bActive = new SqlParameter("@Active", SqlDbType.Bit);
