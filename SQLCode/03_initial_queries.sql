@@ -43,6 +43,11 @@ GO
 
 
 
+
+
+
+
+
 -- collation
 EXEC dbo.Customers_SelectOne
   @customeremail = 'Bill@bill.com'

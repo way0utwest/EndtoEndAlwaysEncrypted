@@ -66,10 +66,12 @@ namespace AlwaysEncryptedClient
                         dgvCustomers.DataSource = dataTable;
                     }
                 }
-                catch
-                {
-                    //A simple catch.
-                    MessageBox.Show("The requested order could not be loaded into the form.");
+                catch (Exception ex)
+            {
+                string strError = "An error occurred getting the data table: " + ex.ToString();
+
+                //A simple catch.
+                MessageBox.Show(strError);
                 }
                 finally
                 {
@@ -138,8 +140,9 @@ namespace AlwaysEncryptedClient
                     txtCustID.Text = "";
                     txtCustomerName.Text = "";
                     txtCustomerEmail.Text = "";
-                    txtCreditLimit.Text = "0.0";
-                    txtSecureCreditLimit.Text = "0.0";
+                    txtTaxID.Text = "";
+                    txtCreditLimit.Text = "0";
+                    txtSecureCreditLimit.Text = "0";
                     chkActive.Checked = true;
 
                 }

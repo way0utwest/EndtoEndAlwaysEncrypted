@@ -18,7 +18,7 @@ CREATE TABLE Customers
 , CustomerEmail VARCHAR(200) COLLATE Latin1_General_BIN2 
 , TaxID VARCHAR(20) NOT NULL
 , CreditLimit int NOT NULL DEFAULT 0.0
-, SecureCreditLimit INT NOT NULL 
+, SecureCreditLimit INT NULL 
 , Active BIT NOT NULL DEFAULT 1
 );
 GO

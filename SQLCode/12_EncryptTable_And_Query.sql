@@ -14,12 +14,20 @@ You are free to use this code inside of your own organization.
 -- Encrypt CustomerEmail with deterministic encryption
 -- Encrypt SecureCreditLimit with random.
 
+
+USE AlwaysEncryptedDemo
+GO
+
 -- Query
 EXEC dbo.Customers_SelectAll;
 GO
 
 -- If this works, check connection settings
 -- Need Column Encryption Setting = Enabled in additional parameters
+
+
+EXEC dbo.Customers_SelectOne
+  @CustomerEmail = 'andy@someisp.com'
 
 
 
@@ -39,4 +47,6 @@ GO
 -- Error
 -- Why?
 
--- Inserts must be with 
+-- Inserts must be with parameters matching the data type and precision.
+
+

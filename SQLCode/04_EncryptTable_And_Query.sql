@@ -38,7 +38,12 @@ EXEC dbo.Customers_SelectOne
   @CustomerEmail = @e;
 GO
 
-
+-- direct query
+SELECT *
+ FROM customers
+ WHERE CustomerEmail = 'sjones@myisp.net'
+ GO
+ 
 
 
 -- Let's add a row
@@ -58,4 +63,19 @@ GO
 
 -- Inserts must be with parameters matching the data type and precision.
 
+
+
+
+
+
+-- However, I can query non-encrpyted columns
+SELECT *
+ FROM customers
+ WHERE CustomerID = 1
+ GO
+
+ -- inserts?
+ INSERT dbo.Customers
+  (CustomerID, CustomerName, TaxID, CreditLimit, Active)
+  VALUES (11, 'Stevie', '42423432', 200, 1);
 

@@ -12,7 +12,8 @@ USE AlwaysEncryptedDemo
 GO
 -- Security setup
 -- Create a role and grant rights
-CREATE ROLE AERights;
+IF NOT EXISTS( SELECT name FROM sys.database_principals AS dp WHERE name = 'AERights')
+  CREATE ROLE AERights;
 GO
 GRANT EXECUTE ON dbo.Customers_Insert TO AERights
 GRANT EXECUTE ON dbo.Customers_SelectOne TO AERights
@@ -23,7 +24,8 @@ GO
 -- add Login if it doesn't exist
 
 -- Add our user
-CREATE USER AEUser FOR LOGIN AEUser;
+IF NOT EXISTS( SELECT name FROM sys.database_principals AS dp WHERE name = 'AEUser')
+  CREATE USER AEUser FOR LOGIN AEUser;
 GO
 
 ALTER ROLE AERights ADD MEMBER AEUser
@@ -34,10 +36,8 @@ GO
 
 -- Need to grant security for the encryption keys
 GRANT VIEW ANY COLUMN MASTER KEY DEFINITION TO AERights;
-GO
 GRANT VIEW ANY COLUMN ENCRYPTION KEY DEFINITION TO AERights;
 GO
-
 
 -- Encrhyption Objects. We'll skip these to start. We need the certificate in our local
 -- certificate store. Open User Certificates in Windows
