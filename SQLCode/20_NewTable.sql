@@ -9,6 +9,28 @@ or redistributed by anyone without permission.
 You are free to use this code inside of your own organization.
 */
 
+-- Show new certificate
+-- run ISE, with Generate_New_Certificate.ps1
+-- Check User store
+-- Get Thumbprint, replace below
+
+CREATE COLUMN MASTER KEY SteveDemoNewCMK
+WITH (
+KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',
+KEY_PATH = N'CurrentUser/My/1B5DDF79C12CE64A2AF514D2E78E2B40B4EA61A9'
+);
+GO
+
+
+-- Need a new CEK
+-- USE GUI, save script, name SteveCEK2
+
+
+
+
+
+-- Create a new table from scratch.
+
 CREATE TABLE Customers2
 (CustomerID INT NOT NULL PRIMARY KEY
 , CustomerName VARCHAR(200) NOT NULL
@@ -17,7 +39,7 @@ CREATE TABLE Customers2
                      ( 
                           ENCRYPTION_TYPE = DETERMINISTIC, 
                           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', 
-                          COLUMN_ENCRYPTION_KEY = [CEK_Auto1]
+                          COLUMN_ENCRYPTION_KEY = [SteveCEK2]
                           )
 				    NOT NULL 
 , TaxID VARCHAR(20) NOT NULL

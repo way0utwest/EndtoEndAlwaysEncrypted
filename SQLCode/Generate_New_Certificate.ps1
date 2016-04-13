@@ -1,0 +1,1 @@
+﻿New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DNSName “CN=Steve AE Demo” -KeyUsage KeyEncipherment -TextExtension @(“2.5.29.37={text}1.3.6.1.5.5.8.2.2,1.3.6.1.4.1.311.10.3.11”) -provider “Microsoft Strong Cryptographic Provider”
