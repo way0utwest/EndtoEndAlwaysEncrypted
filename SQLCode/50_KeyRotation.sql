@@ -11,6 +11,15 @@ You are free to use this code inside of your own organization.
 USE AlwaysEncryptedDemo
 GO
 
+-- Run ISE
+-- Create new cert
+
+
 -- create new CMK
+CREATE COLUMN MASTER KEY NewCMK
+WITH (
+KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',
+KEY_PATH = N'CurrentUser/My/D036738E24980F766D2D0800B26DF09858FDDE66'
+);
 
 -- encrypt CeK
