@@ -68,7 +68,7 @@ namespace AlwaysEncryptedClient
                 }
                 catch (Exception ex)
             {
-                string strError = "An error occurred getting the data table: " + ex.ToString();
+                string strError = "An error occurred getting the data table: " + ex.Message;
 
                 //A simple catch.
                 MessageBox.Show(strError);

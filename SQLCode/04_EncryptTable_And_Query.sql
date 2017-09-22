@@ -37,6 +37,7 @@ DECLARE @e VARCHAR(200) = 'andy@someisp.com';
 EXEC dbo.Customers_SelectOne
   @CustomerEmail = @e;
 GO
+-- This works in SSMS17
 
 -- direct query
 SELECT *
