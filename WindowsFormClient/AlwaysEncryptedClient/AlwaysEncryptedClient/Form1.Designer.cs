@@ -66,18 +66,20 @@
             // 
             // txtInstance
             // 
-            this.txtInstance.Location = new System.Drawing.Point(75, 19);
+            this.txtInstance.Location = new System.Drawing.Point(112, 29);
+            this.txtInstance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInstance.Name = "txtInstance";
-            this.txtInstance.Size = new System.Drawing.Size(121, 20);
+            this.txtInstance.Size = new System.Drawing.Size(180, 26);
             this.txtInstance.TabIndex = 80;
             this.txtInstance.Text = ".\\SQL2016";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 22);
+            this.label1.Location = new System.Drawing.Point(16, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 88;
             this.label1.Text = "Instance";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -85,52 +87,58 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 54);
+            this.label2.Location = new System.Drawing.Point(16, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 200;
             this.label2.Text = "Database";
             // 
             // txtDB
             // 
-            this.txtDB.Location = new System.Drawing.Point(75, 46);
+            this.txtDB.Location = new System.Drawing.Point(112, 71);
+            this.txtDB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDB.Name = "txtDB";
-            this.txtDB.Size = new System.Drawing.Size(121, 20);
+            this.txtDB.Size = new System.Drawing.Size(180, 26);
             this.txtDB.TabIndex = 300;
-            this.txtDB.Text = "AlwaysEncryptedDemo";
+            this.txtDB.Text = "EncryptionDemo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 83);
+            this.label3.Location = new System.Drawing.Point(16, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.Size = new System.Drawing.Size(43, 20);
             this.label3.TabIndex = 400;
             this.label3.Text = "User";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 112);
+            this.label4.Location = new System.Drawing.Point(16, 172);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 500;
             this.label4.Text = "Password";
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(75, 83);
+            this.txtUser.Location = new System.Drawing.Point(112, 128);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(121, 20);
+            this.txtUser.Size = new System.Drawing.Size(180, 26);
             this.txtUser.TabIndex = 600;
             this.txtUser.Text = "AEUser";
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(75, 112);
+            this.txtPwd.Location = new System.Drawing.Point(112, 172);
+            this.txtPwd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
-            this.txtPwd.Size = new System.Drawing.Size(121, 20);
+            this.txtPwd.Size = new System.Drawing.Size(180, 26);
             this.txtPwd.TabIndex = 700;
             this.txtPwd.Text = "Blu3Corn";
             // 
@@ -146,10 +154,10 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtDB);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(393, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(590, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(220, 166);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(330, 255);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Authentication";
@@ -159,9 +167,10 @@
             this.chkEncrypt.AutoSize = true;
             this.chkEncrypt.Checked = true;
             this.chkEncrypt.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkEncrypt.Location = new System.Drawing.Point(75, 140);
+            this.chkEncrypt.Location = new System.Drawing.Point(112, 215);
+            this.chkEncrypt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkEncrypt.Name = "chkEncrypt";
-            this.chkEncrypt.Size = new System.Drawing.Size(74, 17);
+            this.chkEncrypt.Size = new System.Drawing.Size(107, 24);
             this.chkEncrypt.TabIndex = 1000;
             this.chkEncrypt.Text = "Encrypted";
             this.chkEncrypt.UseVisualStyleBackColor = true;
@@ -169,35 +178,33 @@
             // lblConnect
             // 
             this.lblConnect.AutoSize = true;
-            this.lblConnect.Location = new System.Drawing.Point(11, 140);
+            this.lblConnect.Location = new System.Drawing.Point(16, 215);
+            this.lblConnect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConnect.Name = "lblConnect";
-            this.lblConnect.Size = new System.Drawing.Size(0, 13);
+            this.lblConnect.Size = new System.Drawing.Size(0, 20);
             this.lblConnect.TabIndex = 9;
             // 
             // txtCustID
             // 
-            this.txtCustID.Location = new System.Drawing.Point(119, 11);
-            this.txtCustID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustID.Location = new System.Drawing.Point(178, 17);
             this.txtCustID.Name = "txtCustID";
-            this.txtCustID.Size = new System.Drawing.Size(233, 20);
+            this.txtCustID.Size = new System.Drawing.Size(348, 26);
             this.txtCustID.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 16);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(34, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 100;
             this.label5.Text = "CustomerID";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(22, 204);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Location = new System.Drawing.Point(33, 314);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(122, 26);
+            this.btnSearch.Size = new System.Drawing.Size(183, 40);
             this.btnSearch.TabIndex = 110;
             this.btnSearch.Text = "Get Customers";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -206,18 +213,16 @@
             // dgvCustomers
             // 
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(19, 235);
-            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCustomers.Location = new System.Drawing.Point(28, 362);
             this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.Size = new System.Drawing.Size(603, 151);
+            this.dgvCustomers.Size = new System.Drawing.Size(904, 232);
             this.dgvCustomers.TabIndex = 12;
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(504, 390);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuit.Location = new System.Drawing.Point(756, 600);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(119, 23);
+            this.btnQuit.Size = new System.Drawing.Size(178, 35);
             this.btnQuit.TabIndex = 13;
             this.btnQuit.Text = "Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
@@ -239,56 +244,51 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtCustID);
-            this.groupBox2.Location = new System.Drawing.Point(12, 15);
+            this.groupBox2.Location = new System.Drawing.Point(18, 23);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(376, 184);
+            this.groupBox2.Size = new System.Drawing.Size(564, 283);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add New Customer";
             // 
             // txtTaxID
             // 
-            this.txtTaxID.Location = new System.Drawing.Point(119, 83);
-            this.txtTaxID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTaxID.Location = new System.Drawing.Point(178, 128);
             this.txtTaxID.Name = "txtTaxID";
-            this.txtTaxID.Size = new System.Drawing.Size(233, 20);
+            this.txtTaxID.Size = new System.Drawing.Size(348, 26);
             this.txtTaxID.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 82);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(30, 126);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
+            this.label9.Size = new System.Drawing.Size(51, 20);
             this.label9.TabIndex = 210;
             this.label9.Text = "TaxID";
             // 
             // txtSecureCreditLimit
             // 
-            this.txtSecureCreditLimit.Location = new System.Drawing.Point(119, 130);
-            this.txtSecureCreditLimit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSecureCreditLimit.Location = new System.Drawing.Point(178, 200);
             this.txtSecureCreditLimit.Name = "txtSecureCreditLimit";
-            this.txtSecureCreditLimit.Size = new System.Drawing.Size(233, 20);
+            this.txtSecureCreditLimit.Size = new System.Drawing.Size(348, 26);
             this.txtSecureCreditLimit.TabIndex = 24;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 132);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(30, 203);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 13);
+            this.label10.Size = new System.Drawing.Size(143, 20);
             this.label10.TabIndex = 190;
             this.label10.Text = "Secure Credit Limit";
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(276, 155);
-            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddCustomer.Location = new System.Drawing.Point(414, 238);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(76, 25);
+            this.btnAddCustomer.Size = new System.Drawing.Size(114, 38);
             this.btnAddCustomer.TabIndex = 30;
             this.btnAddCustomer.Text = "Add";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
@@ -297,73 +297,67 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 108);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(30, 166);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 440;
             this.label8.Text = "Credit Limit";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 61);
+            this.label7.Location = new System.Drawing.Point(30, 94);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 160;
             this.label7.Text = "Email";
             // 
             // chkActive
             // 
             this.chkActive.AutoSize = true;
-            this.chkActive.Location = new System.Drawing.Point(119, 155);
-            this.chkActive.Margin = new System.Windows.Forms.Padding(2);
+            this.chkActive.Location = new System.Drawing.Point(178, 238);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(56, 17);
+            this.chkActive.Size = new System.Drawing.Size(78, 24);
             this.chkActive.TabIndex = 28;
             this.chkActive.Text = "Active";
             this.chkActive.UseVisualStyleBackColor = true;
             // 
             // txtCreditLimit
             // 
-            this.txtCreditLimit.Location = new System.Drawing.Point(119, 106);
-            this.txtCreditLimit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCreditLimit.Location = new System.Drawing.Point(178, 163);
             this.txtCreditLimit.Name = "txtCreditLimit";
-            this.txtCreditLimit.Size = new System.Drawing.Size(233, 20);
+            this.txtCreditLimit.Size = new System.Drawing.Size(348, 26);
             this.txtCreditLimit.TabIndex = 20;
             // 
             // txtCustomerEmail
             // 
-            this.txtCustomerEmail.Location = new System.Drawing.Point(119, 59);
-            this.txtCustomerEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerEmail.Location = new System.Drawing.Point(178, 91);
             this.txtCustomerEmail.Name = "txtCustomerEmail";
-            this.txtCustomerEmail.Size = new System.Drawing.Size(233, 20);
+            this.txtCustomerEmail.Size = new System.Drawing.Size(348, 26);
             this.txtCustomerEmail.TabIndex = 15;
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Location = new System.Drawing.Point(119, 35);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerName.Location = new System.Drawing.Point(178, 54);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(233, 20);
+            this.txtCustomerName.Size = new System.Drawing.Size(348, 26);
             this.txtCustomerName.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 41);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(32, 63);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 110;
             this.label6.Text = "Name";
             // 
             // lblProcedure
             // 
-            this.lblProcedure.Location = new System.Drawing.Point(170, 208);
-            this.lblProcedure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProcedure.Location = new System.Drawing.Point(255, 320);
             this.lblProcedure.Name = "lblProcedure";
-            this.lblProcedure.Size = new System.Drawing.Size(180, 19);
+            this.lblProcedure.Size = new System.Drawing.Size(270, 29);
             this.lblProcedure.TabIndex = 150;
             this.lblProcedure.Text = "dbo.Customers_SelectAll";
             this.lblProcedure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -372,17 +366,16 @@
             // txtFilter
             // 
             this.txtFilter.Enabled = false;
-            this.txtFilter.Location = new System.Drawing.Point(398, 208);
-            this.txtFilter.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFilter.Location = new System.Drawing.Point(597, 320);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(191, 20);
+            this.txtFilter.Size = new System.Drawing.Size(284, 26);
             this.txtFilter.TabIndex = 160;
             // 
             // frmAlwaysEncrypted
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 415);
+            this.ClientSize = new System.Drawing.Size(974, 638);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblProcedure);
             this.Controls.Add(this.groupBox2);
@@ -390,6 +383,7 @@
             this.Controls.Add(this.dgvCustomers);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAlwaysEncrypted";
             this.Text = "AlwaysEncryptedClient";
             this.Load += new System.EventHandler(this.Form1_Load);
